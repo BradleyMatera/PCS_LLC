@@ -1,57 +1,37 @@
-# PCS LLC Website Review
+# PALMERS REPAIR LLC Website Review
 
-Five complete static website directions for PCS LLC, a Rockford-area business focused on bucket trucks and specialized work-truck equipment.
+This repository contains five finished website design directions prepared for Tyler Palmer's business.
 
-## Live review
+## Verified business information
 
-- Welcome and selector: `https://bradleymatera.github.io/PCS_LLC/`
-- Version 1, Shop Floor: `https://bradleymatera.github.io/PCS_LLC/v1/`
-- Version 2, High-Visibility: `https://bradleymatera.github.io/PCS_LLC/v2/`
-- Version 3, Field Manual: `https://bradleymatera.github.io/PCS_LLC/v3/`
-- Version 4, Heavy Metal: `https://bradleymatera.github.io/PCS_LLC/v4/`
-- Version 5, Truck Board: `https://bradleymatera.github.io/PCS_LLC/v5/`
+- **Legal name:** PALMERS REPAIR LLC
+- **Illinois file number:** 18377489
+- **Status:** Active
+- **Entity type:** Illinois domestic LLC
+- **Organization date:** July 14, 2026
+- **Registered agent:** Tyler Palmer
+- **Location:** Rockford, Illinois
+- **Phone:** (815) 558-0657
 
-## Confirmed business information used
+The repository name remains `PCS_LLC` because changing a GitHub repository name can break existing GitHub Pages links. Public-facing content must use the verified legal name **PALMERS REPAIR LLC**, not PCS LLC or Palmers Diesel Repair.
 
-- Legal/business name supplied by Tyler: PCS LLC
-- Primary contact: Tyler Palmer
-- Phone: `(815) 558-0657`
-- Preferred contact method: calls
-- Business focus: bucket trucks, service trucks, crane trucks, and related work-truck equipment
-- Service-area wording: Rockford, Illinois area
-- Tyler is a mechanic
+## Website structure
 
-The site does not publish a home address or invent dealership status, certifications, financing, delivery, warranties, or a confirmed public repair-service menu.
+- `/` presents the five design options to Tyler.
+- `/v1/` through `/v5/` contain the separate finished design directions.
+- `assets/` contains shared styles, scripts, and original graphics.
+- `privacy.html` and `accessibility.html` provide supporting policy pages.
 
-## Finished buyer experience
+## Content rules
 
-Every design contains:
+- Display the business as **PALMERS REPAIR LLC**.
+- Display the phone number as **(815) 558-0657** and link calls to `tel:+18155580657`.
+- Use Illinois file number **18377489** where business verification is useful.
+- Do not describe the legal business as PCS LLC.
+- Do not use Palmers Diesel Repair as the legal entity name.
+- Do not claim specific certifications, warranties, financing, inspection results, inventory, or service availability unless Tyler confirms them.
+- Keep Tyler's direct phone call as the primary contact method.
 
-- A prominent click-to-call action in the header, hero, content, footer, and mobile call bar
-- Clear work-truck categories
-- Guidance that helps callers explain the job, required equipment, budget, location, and timing
-- A pre-purchase checklist for specifications, condition, title, inspection, payment, pickup/delivery, and warranty terms
-- About PCS LLC and direct-contact sections
-- FAQs and structured Organization/FAQ data
-- Privacy, accessibility, and custom 404 pages
-- Responsive mobile, tablet, and desktop layouts
-- Keyboard-visible focus, skip links, reduced-motion support, and readable contrast
-- Original high-contrast truck artwork designed to remain visible on both dark and light themes
+## Deployment
 
-## Review-mode search handling
-
-All five versions are complete, but they duplicate the same business content. The review hub and versions therefore use `noindex,follow` until Tyler chooses one final public version. This prevents duplicate demo pages from competing with the eventual production URL. The selected version can then be switched to `index,follow`, added to the sitemap, and connected to the final domain or canonical URL.
-
-## Technical foundation
-
-- Static HTML and CSS with no framework dependency
-- Minimal JavaScript only where needed
-- Mobile-first responsive layouts
-- Semantic HTML
-- Click-to-call `tel:` links
-- Canonical and social metadata
-- Organization and FAQ JSON-LD
-- `robots.txt`, `sitemap.xml`, and `llms.txt`
-- GitHub Pages deployment workflow
-
-See [`DESIGN-SYSTEM.md`](DESIGN-SYSTEM.md) for shared design rules.
+The static site deploys through GitHub Pages from the `main` branch.
