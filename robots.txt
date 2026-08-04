@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://bradleymatera.github.io/PCS_LLC/sitemap.xml
+
+# The review pages use noindex meta directives until Tyler selects one final public version.
