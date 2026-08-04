@@ -1,25 +1,37 @@
-# PCS LLC
+# PALMERS REPAIR LLC
 
-PCS LLC is a Rockford, Illinois area business focused on bucket trucks and specialized work-truck equipment.
+PALMERS REPAIR LLC is an active Illinois vehicle repair business in Rockford, Illinois.
+
+## Verified business information
+- Legal name: PALMERS REPAIR LLC
+- Entity type: Illinois domestic LLC
+- Illinois file number: 18377489
+- Status: Active as of July 14, 2026
+- Organization date: July 14, 2026
+- Registered agent: Tyler Palmer
+- Registered address: 8515 N Main St, Rockford, IL 61103
 
 ## Contact
 - Primary contact: Tyler Palmer
 - Phone: +1-815-558-0657
 - Preferred contact method: telephone call
-- Service area wording: Rockford, Illinois area
 
 ## Business focus
-- Bucket trucks
-- Service trucks
-- Crane trucks
-- Commercial work trucks
-- Service bodies, cranes, hydraulics, controls, and related work-truck equipment
+Visitors may call Tyler to discuss:
+- Vehicle and work-truck repair
+- Diesel repair
+- Mechanical diagnosis and repair
+- Body work and parts replacement
+- Paint and body-work materials
+- Fabrication and custom repair requests
 
-## Calling PCS LLC
-Callers should be ready to explain the intended job, truck type, required reach or equipment, budget, location, and timeline. Current inventory, known specifications, mechanical condition, price, title information, inspection, payment, pickup or delivery, included equipment, and any warranty terms should be confirmed directly for the specific truck.
+Specific services, availability, estimates, parts, labor, scheduling, payment, pickup, and warranty terms must be confirmed directly for each job.
+
+## Calling PALMERS REPAIR LLC
+Callers should be ready to provide the vehicle year, make, model, engine, mileage, VIN when relevant, symptoms or damage, requested work, location, and timeline.
 
 ## Important limitations
-Inventory changes. This review website does not publish a street address or claim dealership status, certifications, financing, delivery, warranties, or a defined public repair-service menu. Tyler is a mechanic, but public repair services have not yet been confirmed for advertising.
+The website does not guarantee that every listed service is available. It does not promise certifications, financing, towing, delivery, fixed pricing, turnaround times, or warranties. Tyler must confirm the exact job and terms before work begins.
 
 ## Review status
-Five complete design directions are temporarily available for owner review. They are marked noindex until Tyler selects one final public website.
+Five complete design directions are temporarily available for owner review. They remain marked noindex until Tyler selects one final public website. The repository and GitHub Pages path still use PCS_LLC temporarily and will be renamed later.
