@@ -1,8 +1,4 @@
 User-agent: *
-Disallow: /v1/
-Disallow: /v2/
-Disallow: /v3/
-Disallow: /v4/
-Disallow: /v5/
+Allow: /
 
 Sitemap: https://bradleymatera.github.io/PCS_LLC/sitemap.xml

@@ -10,6 +10,7 @@
       id: '2015-4x4-flatbed',
       status: 'available',
       statusDate: '2026-08-04',
+      lastVerified: '2026-08-04',
       title: '2015 4x4 flatbed truck',
       price: '$17,500',
       image: '619827631_122156366738919072_8248323462576868539_n.jpg',
@@ -22,6 +23,7 @@
       id: '2012-bucket-30ft',
       status: 'available',
       statusDate: '2026-08-04',
+      lastVerified: '2026-08-04',
       title: '2012 bucket truck',
       price: '$18,500',
       image: '619843164_122156367950919072_2119500145427937326_n.jpg',
@@ -34,6 +36,7 @@
       id: '2015-4x4-crane-compressor',
       status: 'available',
       statusDate: '2026-08-04',
+      lastVerified: '2026-08-04',
       title: '2015 4x4 service truck with crane and compressor',
       price: '$67,500',
       image: '619996371_122156366186919072_4437134876808735232_n.jpg',
@@ -46,6 +49,7 @@
       id: 'f550-4x4-dump',
       status: 'available',
       statusDate: '2026-08-04',
+      lastVerified: '2026-08-04',
       title: 'Ford F-550 4x4 dump / service truck',
       price: '$29,000',
       image: '621735018_122156366378919072_3189863185645130314_n.jpg',
@@ -58,6 +62,7 @@
       id: '2009-f550-crane',
       status: 'available',
       statusDate: '2026-08-04',
+      lastVerified: '2026-08-04',
       title: '2009 F-550 4x4 crane truck',
       price: '$12,500',
       image: '621801846_122156367002919072_7862293845787208475_n.jpg',
@@ -70,6 +75,7 @@
       id: '7500lb-crane-service-truck',
       status: 'available',
       statusDate: '2026-08-04',
+      lastVerified: '2026-08-04',
       title: 'Service truck with 7,500 lb crane',
       price: '$38,500',
       image: '621818259_122156367632919072_1631455180606251858_n.jpg',
@@ -98,7 +104,10 @@
   const statusLabel = (truck) => {
     if (truck.status === 'pending') return `Sale pending${truck.statusDate ? ` · ${truck.statusDate}` : ''}`;
     if (truck.status === 'sold') return `Sold${truck.statusDate ? ` · ${truck.statusDate}` : ''}`;
-    return 'Available';
+    if (!truck.lastVerified) return 'Available';
+    const days = Math.floor((new Date() - new Date(truck.lastVerified)) / (1000*60*60*24));
+    if (days > 14) return 'Call to verify availability';
+    return `Available — verified ${truck.lastVerified}`;
   };
 
   const truckCard = (truck) => {
@@ -141,7 +150,7 @@
           <p class="eyebrow">Current inventory</p>
           <h2 id="inventory-title">Trucks for sale right now.</h2>
         </div>
-        <p class="lead">These listings are built from Tyler's current PCS Truck Sales photos. Call or message Tyler before traveling because work-truck inventory can change quickly.</p>
+        <p class="lead">The current inventory section on this page is updated manually. Call or message Tyler before traveling because work-truck inventory can change quickly.</p>
       </div>
       <div class="button-row inventory-actions">
         <a class="button button-primary" href="${PHONE_LINK}">Call Tyler · ${PHONE_DISPLAY}</a>
@@ -193,7 +202,7 @@
     footer.insertBefore(line, footer.firstChild);
   });
 
-  if (!document.querySelector('script[data-pcs-schema]')) { const faqItems = Array.from(document.querySelectorAll('.faq details')).map((detail) => { const q = detail.querySelector('summary')?.textContent?.trim() || ''; const a = detail.querySelector('p')?.textContent?.trim() || ''; return q && a ? { '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } } : null; }).filter(Boolean); const graph = [ { '@type': 'WebSite', 'name': 'PCS Truck Sales', 'url': 'https://bradleymatera.github.io/PCS_LLC/' }, { '@type': 'AutomotiveBusiness', 'name': 'PCS Truck Sales', 'telephone': '+1-815-713-6291', 'email': EMAIL, 'url': 'https://bradleymatera.github.io/PCS_LLC/', 'sameAs': [FACEBOOK_URL], 'description': 'PCS Truck Sales has bucket, utility, service, crane, flatbed, and dump work trucks for sale. Call Tyler at (815) 713-6291. Serving Rockford, IL and surrounding states.', 'priceRange': '$$', 'address': { '@type': 'PostalAddress', 'addressLocality': 'Rockford', 'addressRegion': 'IL', 'addressCountry': 'US' }, 'areaServed': 'Rockford, IL and surrounding states', 'hasOfferCatalog': { '@type': 'OfferCatalog', 'name': 'Current PCS Truck Sales inventory', 'itemListElement': INVENTORY.map((truck, index) => ({ '@type': 'ListItem', 'position': index + 1, 'item': { '@type': 'Offer', 'name': truck.title, 'description': ((truck.facts || []).join('. ') + (truck.note ? ('. ' + truck.note) : '')), 'price': (truck.price ? truck.price.replace(/[^0-9.]/g, '') : undefined), 'priceCurrency': (truck.price && truck.price.includes('$') ? 'USD' : undefined), 'availability': (truck.status === 'sold' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock'), 'url': FACEBOOK_URL, 'image': new URL(imageUrl(truck.image), window.location.href).href } })) } } ]; if (faqItems.length) graph.push({ '@type': 'FAQPage', 'mainEntity': faqItems }); const schema = document.createElement('script'); schema.type = 'application/ld+json'; schema.dataset.pcsSchema = 'inventory'; schema.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }); document.head.appendChild(schema); }
+  if (!document.querySelector('script[data-pcs-schema]')) { const faqItems = Array.from(document.querySelectorAll('.faq details')).map((detail) => { const q = detail.querySelector('summary')?.textContent?.trim() || ''; const a = detail.querySelector('p')?.textContent?.trim() || ''; return q && a ? { '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } } : null; }).filter(Boolean); const graph = [ { '@type': 'WebSite', 'name': 'PCS Truck Sales', 'url': 'https://bradleymatera.github.io/PCS_LLC/' }, { '@type': 'AutomotiveBusiness', 'name': 'PCS Truck Sales', 'telephone': '+1-815-713-6291', 'email': EMAIL, 'url': 'https://bradleymatera.github.io/PCS_LLC/', 'sameAs': [FACEBOOK_URL], 'description': 'PCS Truck Sales has bucket, utility, service, crane, flatbed, and dump commercial work trucks for sale. Call Tyler at (815) 713-6291. Located in the Rockford, Illinois area.', 'priceRange': '$$', 'address': { '@type': 'PostalAddress', 'addressLocality': 'Rockford', 'addressRegion': 'IL', 'addressCountry': 'US' }, 'areaServed': 'Rockford, Illinois area', 'hasOfferCatalog': { '@type': 'OfferCatalog', 'name': 'Current PCS Truck Sales inventory', 'itemListElement': INVENTORY.map((truck, index) => ({ '@type': 'ListItem', 'position': index + 1, 'item': { '@type': 'Offer', 'name': truck.title, 'description': ((truck.facts || []).join('. ') + (truck.note ? ('. ' + truck.note) : '')), 'price': (truck.price ? truck.price.replace(/[^0-9.]/g, '') : undefined), 'priceCurrency': (truck.price && truck.price.includes('$') ? 'USD' : undefined), 'availability': (truck.status === 'sold' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock'), 'url': FACEBOOK_URL, 'image': new URL(imageUrl(truck.image), window.location.href).href } })) } } ]; if (faqItems.length) graph.push({ '@type': 'FAQPage', 'mainEntity': faqItems }); const schema = document.createElement('script'); schema.type = 'application/ld+json'; schema.dataset.pcsSchema = 'inventory'; schema.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }); document.head.appendChild(schema); }
 
   document.querySelectorAll('details').forEach((item) => {
     item.addEventListener('toggle', () => {

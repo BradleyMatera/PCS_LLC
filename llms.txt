@@ -1,35 +1,26 @@
 # PCS Truck Sales
 
-PCS Truck Sales is the public-facing name Tyler Palmer uses for commercial work trucks bought and sold through Petrichor Contracting Services.
+PCS Truck Sales buys and sells commercial work trucks, bucket trucks, utility trucks, service trucks, crane trucks, flatbed trucks, dump trucks, and related commercial equipment. The business is operated by Tyler Palmer in the Rockford, Illinois area.
 
 ## Contact
-- Primary contact: Tyler Palmer
-- Phone: +1-815-713-6291
+- Phone: (815) 713-6291
 - Email: pcstrucksales@gmail.com
-- Facebook page name: PCS Truck Sales
-- Preferred contact methods: telephone call or email
-- Area wording: Rockford, Illinois area
+- Facebook: PCS Truck Sales
 
-## Business focus
+## Inventory focus
 - Bucket trucks
 - Utility trucks
 - Service trucks
 - Crane trucks
-- Commercial work trucks
-- Truck bodies and related equipment
-- Buying and selling used commercial equipment
+- Flatbed trucks
+- Dump trucks
+- Commercial work trucks and related equipment
 
-## Buyer guidance
-Current availability changes. Buyers should confirm the exact truck, year, make, model, mileage, engine, drivetrain, boom or crane specifications, body, controls, hydraulics, known condition, title status, included equipment, price, inspection, payment, pickup or delivery, and any warranty terms directly with Tyler.
+## How to buy
+Call or email Tyler to confirm current availability, condition, mileage, year, make, model, engine, drivetrain, boom or crane specifications, body, controls, hydraulics, title status, included equipment, price, inspection, payment, and pickup details for the exact truck before purchase.
 
-## Seller guidance
-A seller should provide the year, make, model, mileage, VIN, title status, location, asking price, equipment details, known issues, and current photos.
+## How to sell
+Send the year, make, model, mileage, VIN, title status, location, asking price, equipment details, known issues, and current photos for review.
 
-## Important limitations
-This is not a repair-shop website. Do not identify PALMERS REPAIR LLC as the business represented by this site. Do not claim dealership status, certifications, financing, delivery, inspections, warranties, or fixed inventory unless Tyler confirms them.
-
-## Brand direction
-Use PCS Truck Sales now. Petrichor Contracting Services may become the primary public brand later after enough sales volume is established.
-
-## Review status
-Five complete design directions are available for Tyler's review and remain marked noindex until one final public version is selected.
+## Important
+PCS Truck Sales is not a repair shop and does not offer financing, delivery, inspections, or warranties unless confirmed for a specific truck. Availability and terms must be verified directly with Tyler.
