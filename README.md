@@ -1,51 +1,51 @@
-# PALMERS REPAIR LLC Website Review
+# PCS Truck Sales Website Review
 
-This repository contains five finished website design directions prepared for Tyler Palmer's repair business.
+This repository contains five finished website design directions prepared for Tyler Palmer's work-truck sales business.
 
-## Verified business information
+## Current source of truth
 
-- **Legal name:** PALMERS REPAIR LLC
-- **Illinois file number:** 18377489
-- **Status:** Active as of July 14, 2026
-- **Entity type:** Illinois domestic LLC
-- **Organization date:** July 14, 2026
-- **Registered agent:** Tyler Palmer
-- **Registered address:** 8515 N Main St, Rockford, IL 61103
-- **Phone:** (815) 558-0657
+Tyler clarified that this is **not** a repair-shop website.
 
-The repository name remains `PCS_LLC` temporarily so the existing GitHub Pages links continue working. Public-facing content must use the verified legal name **PALMERS REPAIR LLC**, not PCS LLC or Palmers Diesel Repair.
+- **Public brand:** PCS Truck Sales
+- **Meaning of PCS:** Petrichor Contracting Services
+- **Primary contact:** Tyler Palmer
+- **Phone:** (815) 713-6291
+- **Email:** pcstrucksales@gmail.com
+- **Facebook page name:** PCS Truck Sales
+- **Business focus:** Trucks Tyler buys and sells through PCS/Petrichor Contracting Services
+- **Future direction:** Continue using PCS until sales volume supports a Petrichor rebrand or rename
+
+The repository name remains `PCS_LLC` until Bradley changes it last. Existing GitHub Pages URLs therefore continue to use `/PCS_LLC/` even though the public-facing name is PCS Truck Sales.
+
+## Business focus
+
+- Bucket trucks
+- Utility trucks
+- Service trucks
+- Crane trucks
+- Commercial work trucks
+- Truck bodies and related work-truck equipment
+- Buying trucks from owners and businesses
+- Selling available commercial equipment directly
+
+## Accuracy rules
+
+- Do not present PALMERS REPAIR LLC as the business behind this website.
+- Do not describe this as a repair-shop website.
+- Do not publish a fixed truck as available unless Tyler confirms it is current.
+- Confirm condition, mileage, specifications, title status, included equipment, price, inspection, payment, pickup or delivery, and warranty terms for each truck.
+- Do not promise financing, delivery, inspections, certifications, or warranties unless Tyler confirms them.
+- Use `(815) 713-6291` and `tel:+18157136291` for calls.
+- Use `pcstrucksales@gmail.com` for email.
+- Refer to Petrichor Contracting Services as the operation behind PCS without inventing an unverified entity type or registration number.
 
 ## Website structure
 
 - `/` presents the five design options to Tyler.
-- `/v1/` through `/v5/` contain the separate finished design directions.
+- `/v1/` through `/v5/` contain separate finished design directions.
 - `assets/` contains shared styles, scripts, and original graphics.
 - `privacy.html` and `accessibility.html` provide supporting policy pages.
 
-## Current service wording
-
-The site invites customers to call Tyler to discuss:
-
-- Vehicle and work-truck repair
-- Diesel and mechanical repair
-- Body work and parts replacement
-- Paint and body-work materials
-- Fabrication and custom repair requests
-
-These are call-to-confirm categories, not guarantees that every job will be accepted. Tyler must confirm the exact vehicle, diagnosis, repair, estimate, parts, labor, schedule, payment, pickup, and warranty terms.
-
-## Content rules
-
-- Display the business as **PALMERS REPAIR LLC**.
-- Display the phone number as **(815) 558-0657** and link calls to `tel:+18155580657`.
-- Use Illinois file number **18377489** where business verification is useful.
-- Do not describe the legal business as PCS LLC.
-- Do not use Palmers Diesel Repair as the legal entity name.
-- Do not describe the company as a truck dealer or claim truck inventory without separate confirmation.
-- Do not claim certifications, towing, financing, fixed turnaround times, warranties, or guaranteed service availability unless Tyler confirms them.
-- Keep Tyler's direct phone call as the primary contact method.
-- The registered address may be listed as entity information, but the site must not imply public walk-in hours or encourage unannounced visits.
-
 ## Deployment
 
-The static site deploys through GitHub Pages from the `main` branch. Repository and URL renaming will be handled after Tyler approves the final design and content.
+The static review site deploys through GitHub Pages from the `main` branch. All five versions remain `noindex` until Tyler selects the final public design.
