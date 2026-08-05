@@ -3,7 +3,7 @@
   const PHONE_LINK = 'tel:+18157136291';
   const EMAIL = 'pcstrucksales@gmail.com';
   const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61577572161268';
-  const ASSET_BASE = /\/v\d+\/?$/.test(window.location.pathname) ? '../assets/inventory/' : 'assets/inventory/';
+  const ASSET_BASE = /\/v\d+\/?$/.test(window.location.pathname) ? '../assets/inventory/pcs/' : 'assets/inventory/pcs/';
 
   const INVENTORY = [
     {
@@ -12,7 +12,7 @@
       statusDate: '2026-08-04',
       title: '2015 4x4 flatbed truck',
       price: '$17,500',
-      image: '2015-ford-4x4-flatbed.svg',
+      image: '619827631_122156366738919072_8248323462576868539_n.jpg',
       alt: 'White 2015 four-wheel-drive flatbed work truck listed by PCS Truck Sales',
       location: 'Rockford area',
       facts: ['187k miles', '4x4', 'Flatbed work-truck setup', 'Call Tyler to verify exact make, model, title, condition, and pickup details'],
@@ -24,7 +24,7 @@
       statusDate: '2026-08-04',
       title: '2012 bucket truck',
       price: '$18,500',
-      image: '2012-ford-bucket-30ft.svg',
+      image: '619843164_122156367950919072_2119500145427937326_n.jpg',
       alt: 'White 2012 bucket truck with boom raised listed by PCS Truck Sales',
       location: 'Rockford area',
       facts: ['149k miles', '30 ft bucket', 'Altec bucket equipment pictured', 'Call Tyler to confirm reach, inspection, and included equipment'],
@@ -36,7 +36,7 @@
       statusDate: '2026-08-04',
       title: '2015 4x4 service truck with crane and compressor',
       price: '$67,500',
-      image: '2015-ford-service-crane-compressor.svg',
+      image: '619996371_122156366186919072_4437134876808735232_n.jpg',
       alt: 'White 2015 four-wheel-drive service truck with crane and compressor listed by PCS Truck Sales',
       location: 'Rockford area',
       facts: ['70k miles', '4x4', '6,400 lb crane', 'Hydraulic compressor'],
@@ -48,7 +48,7 @@
       statusDate: '2026-08-04',
       title: 'Ford F-550 4x4 dump / service truck',
       price: '$29,000',
-      image: '2013-ford-f550-4x4-dump.svg',
+      image: '621735018_122156366378919072_3189863185645130314_n.jpg',
       alt: 'White Ford F-550 four-wheel-drive dump and service truck listed by PCS Truck Sales',
       location: 'Rockford area',
       facts: ['160k miles', '4x4', 'Dump bed shown raised', 'Service body storage pictured'],
@@ -60,7 +60,7 @@
       statusDate: '2026-08-04',
       title: '2009 F-550 4x4 crane truck',
       price: '$12,500',
-      image: '2009-ford-f550-crane.svg',
+      image: '621801846_122156367002919072_7862293845787208475_n.jpg',
       alt: 'White 2009 Ford F-550 four-wheel-drive crane truck listed by PCS Truck Sales',
       location: 'Rockford area',
       facts: ['167k miles', '4x4', '4k crane', 'Service body pictured'],
@@ -72,7 +72,7 @@
       statusDate: '2026-08-04',
       title: 'Service truck with 7,500 lb crane',
       price: '$38,500',
-      image: 'service-truck-7500lb-crane.svg',
+      image: '621818259_122156367632919072_1631455180606251858_n.jpg',
       alt: 'White service truck with 7500 pound crane listed by PCS Truck Sales',
       location: 'Rockford area',
       facts: ['213k miles', '7,500 lb crane', 'Service body with crane equipment pictured', 'Call Tyler to confirm year and full specifications'],
@@ -81,9 +81,9 @@
   ];
 
   const SUPPORTING_PHOTOS = [
-    { title: 'PCS work-truck lot', image: 'inventory-lot.svg', alt: 'PCS Truck Sales work-truck lot with multiple commercial trucks' },
-    { title: 'Bucket truck example', image: '2012-ford-f550-bucket-main.svg', alt: 'White bucket truck with boom extended in a yard' },
-    { title: 'Yard lineup', image: 'yard-lineup.svg', alt: 'Lineup of commercial bucket trucks and work trucks in a yard' }
+    { title: 'PCS work-truck lot', image: '505199231_122093652974919072_8658265768223573939_n.jpg', alt: 'PCS Truck Sales work-truck lot with multiple commercial trucks at dusk' },
+    { title: 'Bucket truck example', image: '506440997_122093653424919072_5840617833604270407_n.jpg', alt: 'White bucket truck with boom extended in a yard' },
+    { title: 'Yard lineup', image: '764807208_122187503498919072_6839762536400169308_n.jpg', alt: 'Lineup of commercial bucket trucks and work trucks in a yard' }
   ];
 
   const escapeHtml = (value) => String(value ?? '')
