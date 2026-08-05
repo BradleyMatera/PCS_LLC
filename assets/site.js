@@ -193,35 +193,7 @@
     footer.insertBefore(line, footer.firstChild);
   });
 
-  if (!document.querySelector('script[data-pcs-schema]')) {
-    const schema = document.createElement('script');
-    schema.type = 'application/ld+json';
-    schema.dataset.pcsSchema = 'inventory';
-    schema.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'AutomotiveBusiness',
-      name: 'PCS Truck Sales',
-      url: window.location.href,
-      telephone: '+1-815-713-6291',
-      email: EMAIL,
-      sameAs: [FACEBOOK_URL],
-      description: 'PCS Truck Sales buys and sells bucket trucks, utility trucks, service trucks, crane trucks, flatbed trucks, dump trucks, and related commercial work trucks.',
-      areaServed: 'Northern Illinois',
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Current PCS Truck Sales inventory',
-        itemListElement: INVENTORY.map((truck) => ({
-          '@type': 'Offer',
-          name: truck.title,
-          price: truck.price?.replace(/[^0-9.]/g, '') || undefined,
-          priceCurrency: truck.price?.includes('$') ? 'USD' : undefined,
-          availability: truck.status === 'sold' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock',
-          url: FACEBOOK_URL
-        }))
-      }
-    });
-    document.head.appendChild(schema);
-  }
+  if (!document.querySelector('script[data-pcs-schema]')) { const faqItems = Array.from(document.querySelectorAll('.faq details')).map((detail) => { const q = detail.querySelector('summary')?.textContent?.trim() || ''; const a = detail.querySelector('p')?.textContent?.trim() || ''; return q && a ? { '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } } : null; }).filter(Boolean); const graph = [ { '@type': 'WebSite', 'name': 'PCS Truck Sales', 'url': 'https://bradleymatera.github.io/PCS_LLC/' }, { '@type': 'AutomotiveBusiness', 'name': 'PCS Truck Sales', 'telephone': '+1-815-713-6291', 'email': EMAIL, 'url': 'https://bradleymatera.github.io/PCS_LLC/', 'sameAs': [FACEBOOK_URL], 'description': 'PCS Truck Sales has bucket, utility, service, crane, flatbed, and dump work trucks for sale. Call Tyler at (815) 713-6291. Serving Rockford, IL and surrounding states.', 'priceRange': '$$', 'address': { '@type': 'PostalAddress', 'addressLocality': 'Rockford', 'addressRegion': 'IL', 'addressCountry': 'US' }, 'areaServed': 'Rockford, IL and surrounding states', 'hasOfferCatalog': { '@type': 'OfferCatalog', 'name': 'Current PCS Truck Sales inventory', 'itemListElement': INVENTORY.map((truck, index) => ({ '@type': 'ListItem', 'position': index + 1, 'item': { '@type': 'Offer', 'name': truck.title, 'description': ((truck.facts || []).join('. ') + (truck.note ? ('. ' + truck.note) : '')), 'price': (truck.price ? truck.price.replace(/[^0-9.]/g, '') : undefined), 'priceCurrency': (truck.price && truck.price.includes('$') ? 'USD' : undefined), 'availability': (truck.status === 'sold' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock'), 'url': FACEBOOK_URL, 'image': new URL(imageUrl(truck.image), window.location.href).href } })) } } ]; if (faqItems.length) graph.push({ '@type': 'FAQPage', 'mainEntity': faqItems }); const schema = document.createElement('script'); schema.type = 'application/ld+json'; schema.dataset.pcsSchema = 'inventory'; schema.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }); document.head.appendChild(schema); }
 
   document.querySelectorAll('details').forEach((item) => {
     item.addEventListener('toggle', () => {
