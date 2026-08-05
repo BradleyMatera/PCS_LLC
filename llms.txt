@@ -1,37 +1,35 @@
-# PALMERS REPAIR LLC
+# PCS Truck Sales
 
-PALMERS REPAIR LLC is an active Illinois vehicle repair business in Rockford, Illinois.
-
-## Verified business information
-- Legal name: PALMERS REPAIR LLC
-- Entity type: Illinois domestic LLC
-- Illinois file number: 18377489
-- Status: Active as of July 14, 2026
-- Organization date: July 14, 2026
-- Registered agent: Tyler Palmer
-- Registered address: 8515 N Main St, Rockford, IL 61103
+PCS Truck Sales is the public-facing name Tyler Palmer uses for commercial work trucks bought and sold through Petrichor Contracting Services.
 
 ## Contact
 - Primary contact: Tyler Palmer
-- Phone: +1-815-558-0657
-- Preferred contact method: telephone call
+- Phone: +1-815-713-6291
+- Email: pcstrucksales@gmail.com
+- Facebook page name: PCS Truck Sales
+- Preferred contact methods: telephone call or email
+- Area wording: Rockford, Illinois area
 
 ## Business focus
-Visitors may call Tyler to discuss:
-- Vehicle and work-truck repair
-- Diesel repair
-- Mechanical diagnosis and repair
-- Body work and parts replacement
-- Paint and body-work materials
-- Fabrication and custom repair requests
+- Bucket trucks
+- Utility trucks
+- Service trucks
+- Crane trucks
+- Commercial work trucks
+- Truck bodies and related equipment
+- Buying and selling used commercial equipment
 
-Specific services, availability, estimates, parts, labor, scheduling, payment, pickup, and warranty terms must be confirmed directly for each job.
+## Buyer guidance
+Current availability changes. Buyers should confirm the exact truck, year, make, model, mileage, engine, drivetrain, boom or crane specifications, body, controls, hydraulics, known condition, title status, included equipment, price, inspection, payment, pickup or delivery, and any warranty terms directly with Tyler.
 
-## Calling PALMERS REPAIR LLC
-Callers should be ready to provide the vehicle year, make, model, engine, mileage, VIN when relevant, symptoms or damage, requested work, location, and timeline.
+## Seller guidance
+A seller should provide the year, make, model, mileage, VIN, title status, location, asking price, equipment details, known issues, and current photos.
 
 ## Important limitations
-The website does not guarantee that every listed service is available. It does not promise certifications, financing, towing, delivery, fixed pricing, turnaround times, or warranties. Tyler must confirm the exact job and terms before work begins.
+This is not a repair-shop website. Do not identify PALMERS REPAIR LLC as the business represented by this site. Do not claim dealership status, certifications, financing, delivery, inspections, warranties, or fixed inventory unless Tyler confirms them.
+
+## Brand direction
+Use PCS Truck Sales now. Petrichor Contracting Services may become the primary public brand later after enough sales volume is established.
 
 ## Review status
-Five complete design directions are temporarily available for owner review. They remain marked noindex until Tyler selects one final public website. The repository and GitHub Pages path still use PCS_LLC temporarily and will be renamed later.
+Five complete design directions are available for Tyler's review and remain marked noindex until one final public version is selected.
