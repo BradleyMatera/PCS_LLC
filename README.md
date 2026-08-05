@@ -7,11 +7,10 @@ This repository contains five finished website design directions prepared for Ty
 Tyler clarified that this is **not** a repair-shop website.
 
 - **Public brand:** PCS Truck Sales
-- **Meaning of PCS:** Petrichor Contracting Services
 - **Primary contact:** Tyler Palmer
 - **Phone:** (815) 713-6291
 - **Email:** pcstrucksales@gmail.com
-- **Facebook page name:** PCS Truck Sales
+- **Facebook:** https://www.facebook.com/profile.php?id=61577572161268
 - **Business focus:** Commercial work trucks Tyler buys and sells
 
 The repository name remains `PCS_LLC` until Bradley changes it last. Existing GitHub Pages URLs therefore continue to use `/PCS_LLC/` even though the public-facing name is PCS Truck Sales.
@@ -27,6 +26,19 @@ The repository name remains `PCS_LLC` until Bradley changes it last. Existing Gi
 - Buying trucks from owners and businesses
 - Selling available commercial equipment directly
 
+## Current inventory loaded from Tyler's photos
+
+The website now lists these current trucks from the PCS Truck Sales Facebook/photo inventory:
+
+1. **2015 4x4 flatbed truck** — 187k miles — **$17,500**
+2. **2012 bucket truck** — 149k miles — 30 ft bucket — **$18,500**
+3. **2015 4x4 service truck with crane and compressor** — 70k miles — 6,400 lb crane — hydraulic compressor — **$67,500**
+4. **Ford F-550 4x4 dump / service truck** — 160k miles — **$29,000**
+5. **2009 F-550 4x4 crane truck** — 167k miles — 4k crane — **$12,500**
+6. **Service truck with 7,500 lb crane** — 213k miles — **$38,500**
+
+The source images also include a PCS work-truck lot photo, a bucket-truck example photo, and a yard-lineup photo. The photo files are stored under `assets/inventory/` and referenced by `assets/site.js`.
+
 ## Manual inventory system
 
 All five designs use one shared inventory list near the top of `assets/site.js`. A truck entered there appears immediately after the hero section on every design, so visitors see current inventory within the first screen or first short scroll.
@@ -40,15 +52,15 @@ Each truck supports:
 - One primary image
 - Title and price
 - Location
-- Key facts such as mileage, engine, boom/body, and known condition
+- Key facts such as mileage, crane, bucket, body, and known condition
 - A short factual note
-- Direct call and email actions
+- Direct call, email, and Facebook actions
 
-### Add a truck
+### Add or replace a truck
 
-1. Upload the truck's main image to `assets/inventory/`.
-2. Add one truck object to the `INVENTORY` list in `assets/site.js`.
-3. Use only details Tyler has confirmed.
+1. Put the truck's photo asset in `assets/inventory/`.
+2. Add or replace one truck object in the `INVENTORY` list in `assets/site.js`.
+3. Use only details Tyler has confirmed or details clearly shown in the source photo.
 4. Commit and allow GitHub Pages to deploy.
 
 ### Mark a sale pending
@@ -82,6 +94,7 @@ The site automatically grays the image and places a dated **SOLD** overlay acros
 - Do not promise financing, delivery, inspections, certifications, or warranties unless Tyler confirms them.
 - Use `(815) 713-6291` and `tel:+18157136291` for calls.
 - Use `pcstrucksales@gmail.com` for email.
+- Link Facebook as `https://www.facebook.com/profile.php?id=61577572161268`.
 - Do not put internal branding or future rebranding plans in customer-facing copy.
 
 ## Website structure
