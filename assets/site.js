@@ -3,7 +3,7 @@
   const PHONE_LINK = 'tel:+18157136291';
   const EMAIL = 'pcstrucksales@gmail.com';
   const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61577572161268';
-  const ASSET_BASE = /\/v\d+\/?$/.test(window.location.pathname) ? '../assets/inventory/pcs/' : 'assets/inventory/pcs/';
+  const SCRIPT_BASE = document.currentScript ? document.currentScript.src : '';
 
   const INVENTORY = [
     {
@@ -99,7 +99,7 @@
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
 
-  const imageUrl = (file) => `${ASSET_BASE}${file}`;
+  const imageUrl = (file) => new URL('inventory/pcs/' + file, SCRIPT_BASE).href;
 
   const statusLabel = (truck) => {
     if (truck.status === 'pending') return `Sale pending${truck.statusDate ? ` · ${truck.statusDate}` : ''}`;
@@ -127,7 +127,7 @@
           ${truck.note ? `<p>${escapeHtml(truck.note)}</p>` : ''}
           <div class="button-row">
             <a class="button button-primary" href="${PHONE_LINK}">Call Tyler · ${PHONE_DISPLAY}</a>
-            <a class="button button-secondary" href="${FACEBOOK_URL}" target="_blank" rel="noopener">View on Facebook</a>
+            <a class="button button-secondary" href="${FACEBOOK_URL}" target="_blank" rel="noopener" aria-label="View ${escapeHtml(truck.title)} on Facebook">View on Facebook</a>
           </div>
         </div>
       </article>`;
@@ -189,7 +189,7 @@
     .inventory-photo-card figcaption{padding:.85rem 1rem;font-weight:800}
     @media(max-width:760px){.inventory-section{padding-top:1rem}.inventory-actions .button{width:100%;justify-content:center}}
   `;
-  document.head.appendChild(style);
+  /* inventory styles now live in shared.css */
 
   const hero = document.querySelector('main .hero');
   if (hero) hero.insertAdjacentElement('afterend', inventorySection);
@@ -202,7 +202,7 @@
     footer.insertBefore(line, footer.firstChild);
   });
 
-  if (!document.querySelector('script[data-pcs-schema]')) { const faqItems = Array.from(document.querySelectorAll('.faq details')).map((detail) => { const q = detail.querySelector('summary')?.textContent?.trim() || ''; const a = detail.querySelector('p')?.textContent?.trim() || ''; return q && a ? { '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } } : null; }).filter(Boolean); const graph = [ { '@type': 'WebSite', 'name': 'PCS Truck Sales', 'url': 'https://bradleymatera.github.io/PCS_LLC/' }, { '@type': 'AutomotiveBusiness', 'name': 'PCS Truck Sales', 'telephone': '+1-815-713-6291', 'email': EMAIL, 'url': 'https://bradleymatera.github.io/PCS_LLC/', 'sameAs': [FACEBOOK_URL], 'description': 'PCS Truck Sales has bucket, utility, service, crane, flatbed, and dump commercial work trucks for sale. Call Tyler at (815) 713-6291. Located in the Rockford, Illinois area.', 'priceRange': '$$', 'address': { '@type': 'PostalAddress', 'addressLocality': 'Rockford', 'addressRegion': 'IL', 'addressCountry': 'US' }, 'areaServed': 'Rockford, Illinois area', 'hasOfferCatalog': { '@type': 'OfferCatalog', 'name': 'Current PCS Truck Sales inventory', 'itemListElement': INVENTORY.map((truck, index) => ({ '@type': 'ListItem', 'position': index + 1, 'item': { '@type': 'Offer', 'name': truck.title, 'description': ((truck.facts || []).join('. ') + (truck.note ? ('. ' + truck.note) : '')), 'price': (truck.price ? truck.price.replace(/[^0-9.]/g, '') : undefined), 'priceCurrency': (truck.price && truck.price.includes('$') ? 'USD' : undefined), 'availability': (truck.status === 'sold' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock'), 'url': FACEBOOK_URL, 'image': new URL(imageUrl(truck.image), window.location.href).href } })) } } ]; if (faqItems.length) graph.push({ '@type': 'FAQPage', 'mainEntity': faqItems }); const schema = document.createElement('script'); schema.type = 'application/ld+json'; schema.dataset.pcsSchema = 'inventory'; schema.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }); document.head.appendChild(schema); }
+  if (!document.querySelector('script[data-pcs-schema]')) { const faqItems = Array.from(document.querySelectorAll('.faq details')).map((detail) => { const q = detail.querySelector('summary')?.textContent?.trim() || ''; const a = detail.querySelector('p')?.textContent?.trim() || ''; return q && a ? { '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } } : null; }).filter(Boolean); const graph = [ { '@type': 'WebSite', 'name': 'PCS Truck Sales', 'url': 'https://bradleymatera.github.io/PCS_LLC/' }, { '@type': 'AutomotiveBusiness', 'name': 'PCS Truck Sales', 'telephone': '+1-815-713-6291', 'email': EMAIL, 'url': 'https://bradleymatera.github.io/PCS_LLC/', 'sameAs': [FACEBOOK_URL], 'logo': 'https://bradleymatera.github.io/PCS_LLC/assets/favicon.svg', 'description': 'PCS Truck Sales has bucket, utility, service, crane, flatbed, and dump commercial work trucks for sale. Call Tyler at (815) 713-6291. Located in the Rockford, Illinois area.', 'priceRange': '$$', 'address': { '@type': 'PostalAddress', 'addressLocality': 'Rockford', 'addressRegion': 'IL', 'addressCountry': 'US' }, 'areaServed': 'Rockford, Illinois area', 'hasOfferCatalog': { '@type': 'OfferCatalog', 'name': 'Current PCS Truck Sales inventory', 'itemListElement': INVENTORY.map((truck, index) => ({ '@type': 'ListItem', 'position': index + 1, 'item': { '@type': 'Offer', 'name': truck.title, 'description': ((truck.facts || []).join('. ') + (truck.note ? ('. ' + truck.note) : '')), 'price': (truck.price ? truck.price.replace(/[^0-9.]/g, '') : undefined), 'priceCurrency': (truck.price && truck.price.includes('$') ? 'USD' : undefined), 'availability': (truck.status === 'sold' ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock'), 'url': FACEBOOK_URL, 'image': new URL(imageUrl(truck.image), window.location.href).href } })) } } ]; if (faqItems.length) graph.push({ '@type': 'FAQPage', 'mainEntity': faqItems }); const schema = document.createElement('script'); schema.type = 'application/ld+json'; schema.dataset.pcsSchema = 'inventory'; schema.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }); document.head.appendChild(schema); }
 
   document.querySelectorAll('details').forEach((item) => {
     item.addEventListener('toggle', () => {
